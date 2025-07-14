@@ -1,0 +1,25 @@
+- name: Mettre à jour les paquets
+  apt:
+    update_cache: yes
+    upgrade: yes
+
+- name: Installer les dépendances système
+  apt:
+    name:
+      - git
+      - curl
+      - vim
+      - ufw
+    state: present
+
+- name: Installer fail2ban
+  apt:
+    name: fail2ban
+    state: present
+
+- name: Installer Node.js et npm
+  shell: |
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+    apt-get install -y nodejs
+  args:
+    executable: /bin/bash

@@ -1,0 +1,33 @@
+---
+- name: Créer le dossier de l'application
+  file:
+    path: "{{ app_path }}"
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: '0755'
+
+- name: Cloner le dépôt GitHub
+  git:
+    repo: "{{ repo_url }}"
+    dest: "{{ app_path }}"
+    version: HEAD
+    update: yes
+
+- name: Installer les dépendances Node.js
+  npm:
+    path: "{{ app_path }}"
+    production: yes
+  become_user: ubuntu
+
+- name: Installer pm2 globalement
+  npm:
+    name: pm2
+    global: yes
+
+- name: Lancer l’application avec pm2
+  shell: |
+    pm2 start index.js --name "node-app"
+    pm2 save
+  args:
+    chdir: "{{ app_path }}"

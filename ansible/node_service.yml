@@ -1,0 +1,8 @@
+- name: Provisionner le serveur Node.js
+  hosts: web
+  become: true
+
+  roles:
+    - common
+    - app
+    - nginx
