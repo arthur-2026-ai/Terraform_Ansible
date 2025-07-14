@@ -6,6 +6,12 @@
     group: ubuntu
     mode: '0755'
 
+- name: Supprimer l'ancienne version de l'application si elle existe
+  file:
+    path: "{{ app_path }}"
+    state: absent
+
+
 - name: Cloner le dépôt GitHub
   git:
     repo: "{{ repo_url }}"
