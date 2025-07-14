@@ -43,3 +43,43 @@
   args:
     chdir: "{{ app_path }}"
 
+- name: Enregistrer pm2 comme service au demarage
+  command: pm2 startup systemd
+  become: yes
+
+- name: sauvegarder la configuration pm2
+  command: pm2 save
+
+- name: Créer la config Nginx pour node-app
+  copy:
+    dest: /etc/nginx/sites-available/node-app
+    content: |
+      server {
+          listen 80;
+          server_name _;
+
+          location / {
+              proxy_pass http://localhost:3000;
+              proxy_http_version 1.1;
+              proxy_set_header Upgrade $http_upgrade;
+              proxy_set_header Connection 'upgrade';
+              proxy_set_header Host $host;
+              proxy_cache_bypass $http_upgrade;
+          }
+      }
+
+- name: Activer la config nginx
+  file:
+    src: /etc/nginx/sites-available/node-app
+    dest: /etc/nginx/sites-enabled/node-app
+    state: link
+
+- name: Supprimer default.conf si présent
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
+- name: Redémarrer nginx
+  service:
+    name: nginx
+    state: restarted
