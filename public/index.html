@@ -1,12 +1,1078 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Bienvenue</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORION | Solutions Digitales pour l'Afrique</title>
+    <meta name="description" content="HORION - Entreprise tech spécialisée dans le développement d'applications et les services informatiques au Cameroun et en Afrique">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        secondary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#2e1065',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animation on Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-pattern {
+            background-color: #0c4a6e;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Custom form styling */
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(14, 165, 233, 0.6);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transform: scale(0) translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .chatbot-window.active {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chatbot-messages {
+            height: 350px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .chatbot-input-area {
+            padding: 15px;
+            border-top: 1px solid #e5e7eb;
+            background: white;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #374151;
+            border-bottom-left-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            color: white;
+            border-bottom-right-radius: 6px;
+        }
+
+        .bot-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .quick-reply {
+            background: #e5e7eb;
+            color: #374151;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .quick-reply:hover {
+            background: #d1d5db;
+        }
+
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: white;
+            border-radius: 18px;
+            border-bottom-left-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 80%;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #9ca3af;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .chatbot-input {
+            width: 100%;
+            border: 1px solid #e5e7eb;
+            border-radius: 25px;
+            padding: 12px 50px 12px 16px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .chatbot-input:focus {
+            border-color: #0ea5e9;
+        }
+
+        .send-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #6d28d9 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .send-button:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .send-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .chatbot-window {
+                width: 300px;
+                height: 450px;
+            }
+            
+            .chatbot-container {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
 </head>
-<body>
-  <h1>Hello, Claude DevOps Engineer !</h1>
-  <p>Ceci est une belle page stylée avec Node.js 🎨 Nous venons de creer un volume </p>
+<body class="font-sans text-gray-800 bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-sm z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-2xl font-display font-bold text-gradient">HORION</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-10">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary-600 font-medium">Accueil</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-primary-600 font-medium">Services</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary-600 font-medium">À propos</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary-600 font-medium">Contact</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden flex items-center">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50">
+            <div class="flex justify-end p-4">
+                <button id="close-menu-button" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col px-4 pt-8 space-y-6">
+                <a href="#home" class="text-gray-700 hover:text-primary-600 font-medium py-2 mobile-link">Accueil</a>
+                <a href="#services" class="text-gray-700 hover:text-primary-600 font-medium py-2 mobile-link">Services</a>
+                <a href="#about" class="text-gray-700 hover:text-primary-600 font-medium py-2 mobile-link">À propos</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary-600 font-medium py-2 mobile-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern pt-28 pb-20 md:pt-40 md:pb-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-tight mb-6">
+                        Déployons ensemble la puissance du digital en Afrique.
+                    </h1>
+                    <p class="text-lg text-blue-100 mb-8 max-w-lg">
+                        HORION accompagne les entreprises africaines dans leur transformation numérique avec des solutions innovantes et adaptées aux réalités locales.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#services" class="inline-block bg-white text-primary-700 font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition duration-300 text-center">
+                            Découvrir nos services
+                        </a>
+                        <a href="#contact" class="inline-block bg-transparent border-2 border-white text-white font-medium px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300 text-center">
+                            Nous contacter
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1581089781785-603411fa81e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Digital Innovation" class="rounded-lg shadow-2xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Nos Services</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Des solutions digitales sur mesure pour propulser votre entreprise vers l'avenir.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Développement Web & Mobile</h3>
+                    <p class="text-gray-600 mb-6">
+                        Création d'applications web et mobiles performantes, intuitives et adaptées aux besoins spécifiques de votre entreprise et du marché africain.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Sites web responsifs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Applications mobiles natives</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>E-commerce & solutions de paiement</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Consulting IT</h3>
+                    <p class="text-gray-600 mb-6">
+                        Accompagnement stratégique pour optimiser votre infrastructure IT, améliorer votre cybersécurité et maximiser le retour sur investissement de vos projets technologiques.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Audit et optimisation IT</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Sécurité informatique</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Formation et transfert de compétences</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Transformation Digitale</h3>
+                    <p class="text-gray-600 mb-6">
+                        Accompagnement complet pour digitaliser vos processus métier, former vos équipes et vous adapter aux nouvelles réalités du marché africain.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Digitalisation des processus</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Intégration de solutions cloud</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-primary-500 mr-2"></i>
+                            <span>Innovation et veille technologique</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-block text-primary-600 font-medium hover:text-primary-700">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10" data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Notre Mission</h2>
+                    <div class="w-24 h-1 bg-primary-500 mb-6"></div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Chez HORION, nous croyons fermement que la technologie est un puissant levier de développement pour l'Afrique. Notre mission est de démocratiser l'accès aux solutions digitales innovantes et adaptées aux réalités locales.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8">
+                        Fondée au Cameroun, notre entreprise s'engage à contribuer activement à l'émergence d'un écosystème numérique africain fort, en formant les talents locaux et en développant des solutions qui répondent aux défis spécifiques du continent.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-lightbulb text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Innovation</h4>
+                                <p class="text-gray-600">Solutions créatives</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-handshake text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Partenariat</h4>
+                                <p class="text-gray-600">Collaboration durable</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4">
+                                <i class="fas fa-globe-africa text-xl text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Impact</h4>
+                                <p class="text-gray-600">Développement local</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Team collaboration" class="rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="African tech" class="rounded-lg shadow-md mt-8">
+                        <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Digital innovation" class="rounded-lg shadow-md">
+                        <img src="https://images.unsplash.com/photo-1581089778245-3ce67677f718?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Tech solutions" class="rounded-lg shadow-md mt-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl font-bold mb-2">50+</div>
+                    <div class="text-blue-100">Projets réalisés</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl font-bold mb-2">15+</div>
+                    <div class="text-blue-100">Experts tech</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl font-bold mb-2">5</div>
+                    <div class="text-blue-100">Pays africains</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl font-bold mb-2">98%</div>
+                    <div class="text-blue-100">Clients satisfaits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Contactez-nous</h2>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Prêt à transformer votre vision en réalité digitale ? Contactez-nous dès aujourd'hui pour discuter de votre projet.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 lg:pr-10 mb-10 lg:mb-0" data-aos="fade-right">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold mb-6">Envoyez-nous un message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Nom complet</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" placeholder="Votre nom" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" placeholder="votre@email.com" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full gradient-bg text-white font-medium py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                                Envoyer le message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-bold mb-6">Nos coordonnées</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 shrink-0">
+                                    <i class="fas fa-map-marker-alt text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Adresse</h4>
+                                    <p class="text-gray-600">Vallee Bastos<br>Yaoundé, Cameroun</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 shrink-0">
+                                    <i class="fas fa-phone text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Téléphone</h4>
+                                    <p class="text-gray-600">+237 656 69 70 43</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4 shrink-0">
+                                    <i class="fas fa-envelope text-xl text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Email</h4>
+                                    <p class="text-gray-600">fotsoclaude316@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="pt-6">
+                                <h4 class="font-bold text-lg mb-4">Suivez-nous</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white hover:shadow-lg transition duration-300">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white hover:shadow-lg transition duration-300">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white hover:shadow-lg transition duration-300">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white hover:shadow-lg transition duration-300">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="mb-8 md:mb-0 md:w-2/3" data-aos="fade-right">
+                    <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">Prêt à lancer votre projet digital ?</h2>
+                    <p class="text-gray-300">Contactez-nous dès aujourd'hui pour une consultation gratuite et sans engagement.</p>
+                </div>
+                <div data-aos="fade-left">
+                    <a href="#contact" class="inline-block gradient-bg text-white font-medium px-8 py-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        Démarrer maintenant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">HORION</h3>
+                    <p class="mb-4">Solutions digitales innovantes pour l'Afrique.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">Développement Web</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Applications Mobiles</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Consulting IT</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Transformation Digitale</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Liens utiles</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">À propos</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Projets</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Carrières</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>123 Vallee Bastos<br>Yaoundé, Cameroun</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+237 656 69 70 43</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>fotsoclaude316@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 mt-8 text-center">
+                <p>&copy; 2024 HORION. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full gradient-bg text-white flex items-center justify-center shadow-lg z-50 opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div id="chatbot-window" class="chatbot-window">
+            <div class="chatbot-header">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-3">
+                        <i class="fas fa-robot text-sm"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm">Assistant HORION</h3>
+                        <p class="text-xs text-blue-100">En ligne</p>
+                    </div>
+                </div>
+                <button id="close-chatbot" class="text-white hover:text-blue-100 transition duration-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="chatbot-messages" class="chatbot-messages">
+                <div class="message bot">
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        Bonjour ! 👋 Je suis l'assistant virtuel de HORION. Comment puis-je vous aider aujourd'hui ?
+                        <div class="quick-replies">
+                            <button class="quick-reply" data-message="Quels sont vos services ?">Nos services</button>
+                            <button class="quick-reply" data-message="Je veux un devis">Demander un devis</button>
+                            <button class="quick-reply" data-message="Où êtes-vous situés ?">Localisation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <div class="relative">
+                    <input type="text" id="chatbot-input" class="chatbot-input" placeholder="Tapez votre message...">
+                    <button id="send-message" class="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <button id="chatbot-toggle" class="chatbot-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
+        
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100', 'visible');
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission handling
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For demonstration, we'll just show an alert
+            alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+            contactForm.reset();
+        });
+
+        // Chatbot functionality
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const closeChatbot = document.getElementById('close-chatbot');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const sendMessage = document.getElementById('send-message');
+
+        let isTyping = false;
+
+        // Predefined responses
+        const responses = {
+            'quels sont vos services': 'Nous proposons 3 services principaux :\n\n🖥️ **Développement Web & Mobile** - Sites web, applications mobiles, e-commerce\n\n📊 **Consulting IT** - Audit, sécurité, optimisation\n\n🔄 **Transformation Digitale** - Digitalisation des processus, solutions cloud\n\nSouhaitez-vous plus de détails sur un service en particulier ?',
+            'nos services': 'Nous proposons 3 services principaux :\n\n🖥️ **Développement Web & Mobile** - Sites web, applications mobiles, e-commerce\n\n📊 **Consulting IT** - Audit, sécurité, optimisation\n\n🔄 **Transformation Digitale** - Digitalisation des processus, solutions cloud\n\nSouhaitez-vous plus de détails sur un service en particulier ?',
+            'je veux un devis': 'Parfait ! Pour vous proposer un devis personnalisé, j\'aurais besoin de quelques informations :\n\n• Type de projet souhaité\n• Budget approximatif\n• Délais envisagés\n• Fonctionnalités spécifiques\n\nVous pouvez remplir notre formulaire de contact ou nous appeler au +237 123 456 789 pour discuter de votre projet ! 📞',
+            'demander un devis': 'Parfait ! Pour vous proposer un devis personnalisé, j\'aurais besoin de quelques informations :\n\n• Type de projet souhaité\n• Budget approximatif\n• Délais envisagés\n• Fonctionnalités spécifiques\n\nVous pouvez remplir notre formulaire de contact ou nous appeler au +237 123 456 789 pour discuter de votre projet ! 📞',
+            'où êtes-vous situés': 'Nous sommes basés à Yaoundé, au Cameroun 🇨🇲\n\n📍 **Adresse :** 123 Avenue de l\'Innovation, Yaoundé\n\n📞 **Téléphone :** +237 123 456 789\n\n✉️ **Email :** contact@horion-tech.com\n\nNous intervenons dans toute l\'Afrique centrale et de l\'ouest !',
+            'localisation': 'Nous sommes basés à Yaoundé, au Cameroun 🇨🇲\n\n📍 **Adresse :** 123 Avenue de l\'Innovation, Yaoundé\n\n📞 **Téléphone :** +237 123 456 789\n\n✉️ **Email :** contact@horion-tech.com\n\nNous intervenons dans toute l\'Afrique centrale et de l\'ouest !',
+            'prix': 'Nos tarifs varient selon la complexité et l\'envergure de votre projet. Voici une estimation générale :\n\n💻 **Site web vitrine :** À partir de 500 000 FCFA\n📱 **Application mobile :** À partir de 1 500 000 FCFA\n🏢 **Solution entreprise :** Sur devis personnalisé\n\nContactez-nous pour un devis précis adapté à vos besoins !',
+            'tarifs': 'Nos tarifs varient selon la complexité et l\'envergure de votre projet. Voici une estimation générale :\n\n💻 **Site web vitrine :** À partir de 500 000 FCFA\n📱 **Application mobile :** À partir de 1 500 000 FCFA\n🏢 **Solution entreprise :** Sur devis personnalisé\n\nContactez-nous pour un devis précis adapté à vos besoins !',
+            'contact': 'Voici nos coordonnées de contact :\n\n📞 **Téléphone :** +237 123 456 789\n✉️ **Email :** contact@horion-tech.com\n📍 **Adresse :** 123 Avenue de l\'Innovation, Yaoundé\n\n🌐 **Réseaux sociaux :**\n• Facebook, Twitter, LinkedIn, Instagram\n\nN\'hésitez pas à nous contacter, nous répondons rapidement ! 😊',
+            'horaires': 'Nos horaires d\'ouverture :\n\n🕘 **Lundi - Vendredi :** 8h00 - 18h00\n🕘 **Samedi :** 9h00 - 13h00\n🕘 **Dimanche :** Fermé\n\nPour les urgences, vous pouvez nous contacter par email à tout moment !',
+            'équipe': 'Notre équipe HORION est composée de :\n\n👨‍💻 **15+ développeurs experts**\n👩‍💼 **Consultants IT expérimentés**\n🎨 **Designers UX/UI créatifs**\n📊 **Chefs de projet agiles**\n\nTous passionnés par l\'innovation technologique en Afrique ! 🚀',
+            'technologies': 'Nous maîtrisons les technologies les plus modernes :\n\n**Frontend :** React, Vue.js, Angular, Flutter\n**Backend :** Node.js, Python, PHP, Java\n**Mobile :** React Native, Flutter, Swift, Kotlin\n**Cloud :** AWS, Google Cloud, Azure\n**Bases de données :** MongoDB, PostgreSQL, MySQL\n\nEt bien d\'autres selon vos besoins ! 💻'
+        };
+
+        // Toggle chatbot
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('active');
+            if (chatbotWindow.classList.contains('active')) {
+                chatbotInput.focus();
+            }
+        });
+
+        closeChatbot.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
+        });
+
+        // Send message function
+        function sendUserMessage(message) {
+            if (!message.trim()) return;
+
+            // Add user message
+            addMessage(message, 'user');
+            
+            // Clear input
+            chatbotInput.value = '';
+            
+            // Show typing indicator
+            showTypingIndicator();
+            
+            // Generate bot response after delay
+            setTimeout(() => {
+                hideTypingIndicator();
+                const response = getBotResponse(message);
+                addMessage(response, 'bot');
+            }, 1000 + Math.random() * 1000);
+        }
+
+        // Add message to chat
+        function addMessage(content, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            if (sender === 'bot') {
+                messageDiv.innerHTML = `
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">${formatMessage(content)}</div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="message-content">${content}</div>
+                `;
+            }
+            
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Format message with basic markdown support
+        function formatMessage(message) {
+            return message
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+        }
+
+        // Get bot response
+        function getBotResponse(userMessage) {
+            const message = userMessage.toLowerCase().trim();
+            
+            // Check for exact matches first
+            for (const [key, response] of Object.entries(responses)) {
+                if (message.includes(key)) {
+                    return response;
+                }
+            }
+            
+            // Fallback responses based on keywords
+            if (message.includes('bonjour') || message.includes('salut') || message.includes('hello')) {
+                return 'Bonjour ! 😊 Je suis ravi de vous aider. Que souhaitez-vous savoir sur HORION ?';
+            }
+            
+            if (message.includes('merci') || message.includes('thank')) {
+                return 'Je vous en prie ! N\'hésitez pas si vous avez d\'autres questions. 😊';
+            }
+            
+            if (message.includes('au revoir') || message.includes('bye')) {
+                return 'Au revoir ! N\'hésitez pas à revenir si vous avez des questions. Bonne journée ! 👋';
+            }
+            
+            // Default response
+            return 'Je ne suis pas sûr de comprendre votre question. Voici ce que je peux vous aider :\n\n• Informations sur nos services\n• Demande de devis\n• Coordonnées de contact\n• Localisation\n\nOu tapez votre question différemment ! 🤔';
+        }
+
+        // Show typing indicator
+        function showTypingIndicator() {
+            if (isTyping) return;
+            isTyping = true;
+            
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot typing-message';
+            typingDiv.innerHTML = `
+                <div class="bot-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="typing-indicator">
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+            `;
+            
+            chatbotMessages.appendChild(typingDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Hide typing indicator
+        function hideTypingIndicator() {
+            const typingMessage = chatbotMessages.querySelector('.typing-message');
+            if (typingMessage) {
+                typingMessage.remove();
+            }
+            isTyping = false;
+        }
+
+        // Event listeners
+        sendMessage.addEventListener('click', () => {
+            sendUserMessage(chatbotInput.value);
+        });
+
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendUserMessage(chatbotInput.value);
+            }
+        });
+
+        // Quick reply buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('quick-reply')) {
+                const message = e.target.getAttribute('data-message');
+                sendUserMessage(message);
+            }
+        });
+
+        // Auto-welcome message after 3 seconds if no interaction
+        setTimeout(() => {
+            if (!chatbotWindow.classList.contains('active')) {
+                // Add a subtle notification dot or animation to the chatbot button
+                chatbotToggle.style.animation = 'pulse 2s infinite';
+            }
+        }, 3000);
+
+        // Remove animation when chatbot is opened
+        chatbotToggle.addEventListener('click', () => {
+            chatbotToggle.style.animation = '';
+        });
+    </script>
 </body>
 </html>
