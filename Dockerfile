@@ -1,18 +1,21 @@
-# Étape 1 : Utiliser une image Node.js légère
-FROM node:18-alpine
 
-# Étape 2 : Créer le dossier de travail
-WORKDIR /app
+# Étape 1 : utiliser l'image officielle Node.js
+FROM node:18
 
-# Étape 3 : Copier les fichiers nécessaires
+# Étape 2 : définir le dossier de travail
+WORKDIR /usr/src/app
+
+# Étape 3 : copier les fichiers nécessaires
 COPY package*.json ./
-RUN npm install
 
-# Étape 4 : Copier le reste du projet
+# Étape 4 : installer les dépendances
+RUN npm install --production
+
+# Étape 5 : copier le reste des fichiers
 COPY . .
 
-# Étape 5 : Exposer le port sur lequel l'app écoute
-EXPOSE 3000
+# Étape 6 : exposer le port (si ton app écoute dessus)
+EXPOSE 3001
 
-# Étape 6 : Commande de lancement
+# Étape 7 : commande de lancement
 CMD ["node", "index.js"]
